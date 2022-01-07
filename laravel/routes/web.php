@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Music;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,5 +19,6 @@ Route::get('/', function () {
     return redirect('/musics',307);
 });
 Route::get('/musics',function(){
-    return view("musics",["musics"=>Music::all()]);
+    $musics = Music::orderBy("title")->get();
+    return view("musics",["musics"=>$musics]);
 });
