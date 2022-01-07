@@ -1,0 +1,19 @@
+body {
+    background: cornflowerblue;
+    width: 80%;
+    margin-inline: auto;
+}
+table {
+    background: dodgerblue;
+    width: 70%;
+    margin-inline: auto;
+}
+tr {
+    background: steelblue;
+}
+tr:nth-child(2n) {
+    background: dodgerblue;
+}
+.time{
+    text-align: center;
+}
